@@ -26,7 +26,7 @@ public class FirstScriptV2 : MonoBehaviour
             speed = speed * -1;
         }
 
-        if (squareInScreenSpace.y > Screen.width)
+        if (squareInScreenSpace.x > Screen.width)
         {
             Vector3 fixedPos = new Vector3(Screen.width, 0, 0);
             pos.x = Camera.main.ScreenToWorldPoint(fixedPos).x;
