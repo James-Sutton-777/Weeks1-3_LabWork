@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-    float speed = 0.001f;
+    public float speed = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +16,21 @@ public class FirstScript : MonoBehaviour
     void Update()
     {
         Vector2 pos = transform.position;
-        pos.y += speed;
+        pos.y += speed * Time.deltaTime;
 
         Vector2 squareInScreenSpace = Camera.main.WorldToScreenPoint(pos);
 
-        if (squareInScreenSpace.y > Screen.height || squareInScreenSpace.y < 0)
+        if (squareInScreenSpace.y < 0)
         {
+            Vector3 fixedPos = new Vector3(0, 0, 0);
+            pos.x = Camera.main.ScreenToWorldPoint(fixedPos).x;
+            speed = speed * -1;
+        }
+
+        if (squareInScreenSpace.y > Screen.height)
+        {
+            Vector3 fixedPos = new Vector3(Screen.width, 0, 0);
+            pos.x = Camera.main.ScreenToWorldPoint(fixedPos).x;
             speed = speed * -1;
         }
 
