@@ -23,7 +23,7 @@ public class FirstScript : MonoBehaviour
         if (squareInScreenSpace.y < 0)
         {
             Vector3 fixedPos = new Vector3(0, 0, 0);
-            pos.x = Camera.main.ScreenToWorldPoint(fixedPos).;
+            pos.x = Camera.main.ScreenToWorldPoint(fixedPos).y;
             speed = speed * -1;
         }
 
