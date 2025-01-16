@@ -9,7 +9,7 @@ public class SpaceInvader : MonoBehaviour
     float time;
     public float moveRate = 5;
     public float moveDistance = 1;
-    public float marchDist = 1;
+    public float marchDist = 5;
     float marchCount;
     // Start is called before the first frame update
     void Start()
@@ -31,13 +31,18 @@ public class SpaceInvader : MonoBehaviour
             transform.position = pos;
             marchCount = 0;
             moveDistance = moveDistance * -1;
-        }
-        else (time > moveRate)
+            if (moveRate > 1)
+            {
+                moveRate -= 1;
+            }
+        } 
+        else if(time > moveRate)
         {
             Vector3 pos = transform.position;
             pos.x += moveDistance;
             transform.position = pos;
             marchCount += 1;
+            time = 0;
         }
     }
 }
