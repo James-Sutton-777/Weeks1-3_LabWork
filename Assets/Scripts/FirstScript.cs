@@ -22,14 +22,14 @@ public class FirstScript : MonoBehaviour
 
         if (squareInScreenSpace.y < 0)
         {
-            Vector3 fixedPos = new Vector3(Screen.height, 0, 0);
+            Vector3 fixedPos = new Vector3(0, 0, 0);
             pos.y = Camera.main.ScreenToWorldPoint(fixedPos).y;
             speed = speed * -1;
         }
 
         if (squareInScreenSpace.y > Screen.height)
         {
-            Vector3 fixedPos = new Vector3(10, 0, 0);
+            Vector3 fixedPos = new Vector3(0, Screen.height, 0);
             pos.y = Camera.main.ScreenToWorldPoint(fixedPos).y;
             speed = speed * -1;
         }
