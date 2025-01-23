@@ -18,30 +18,49 @@ public class MovePatrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        waypoint = new List<GameObject>();
+        //waypoint = new List<GameObject>();
         //can be called in class ^
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        
         {
-            transform.position = Vector2.Lerp(start.position, destination.position, curveA.Evaluate(t) * speed);
-            t += Time.deltaTime;
-            if (t >= 1)
+            if ((destination == null) || (start == null))
             {
-                t = 0;
-                i++;
-                destination = waypoint[(i + 1) % waypoint.Count].transform;
-                start = waypoint[(i) % waypoint.Count].transform;
+                if (waypoint.Count > 1)
+                {
+                    destination = waypoint[1].transform;
+                    start = waypoint[0].transform;
+                }
+            }
+            else
+            {
+                transform.position = Vector2.Lerp(start.position, destination.position, curveA.Evaluate(t) * speed);
+                t += Time.deltaTime;
+                if (t >= 1)
+                {
+                    t = 0;
+                    i++;
+                    destination = waypoint[1].transform;
+                    start = waypoint[0].transform;
+                }
             }
         }
-
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            waypoint.Add(Instantiate(prefab));
+            Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            GameObject thing = Instantiate(prefab);
+            thing.transform.position = mouse;
+            waypoint.Add(thing);
+            if (waypoint.Count > 3)
+            {
+                GameObject dead = waypoint[0];
+                waypoint.Remove(dead);
+                Destroy(dead);
+            }
         }
     }
 }
