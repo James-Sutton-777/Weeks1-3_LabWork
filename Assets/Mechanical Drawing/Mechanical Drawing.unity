@@ -384,6 +384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 238598598}
   - component: {fileID: 238598599}
+  - component: {fileID: 238598600}
   m_Layer: 0
   m_Name: Probe Flasher 1
   m_TagString: Untagged
@@ -458,6 +459,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &238598600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238598597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a300b47111431bf4c9427f6df9c3276e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -3.3646703
+      outSlope: -3.3646703
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.29510307
+      value: 0.0070754886
+      inSlope: -0.4554093
+      outSlope: -0.4554093
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.69974226
+      value: 1
+      inSlope: -0.43527365
+      outSlope: -0.43527365
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99487305
+      value: 0.018867493
+      inSlope: -3.324399
+      outSlope: -3.324399
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  cycle: 0
 --- !u!1 &431035485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,6 +2055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1572327740}
   - component: {fileID: 1572327741}
+  - component: {fileID: 1572327742}
   m_Layer: 0
   m_Name: Probe Flasher 2
   m_TagString: Untagged
@@ -2073,6 +2130,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1572327742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572327739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a300b47111431bf4c9427f6df9c3276e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -3.3646703
+      outSlope: -3.3646703
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.29510307
+      value: 0.0070754886
+      inSlope: -0.4554093
+      outSlope: -0.4554093
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.69974226
+      value: 1
+      inSlope: -0.43527365
+      outSlope: -0.43527365
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99487305
+      value: 0.018867493
+      inSlope: -3.324399
+      outSlope: -3.324399
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  cycle: 0
 --- !u!1 &1617703996
 GameObject:
   m_ObjectHideFlags: 0

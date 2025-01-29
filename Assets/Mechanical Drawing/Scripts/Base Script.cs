@@ -10,7 +10,8 @@ public class BaseScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       on = false;
+        //power is off at the start
+        on = false;
     }
 
     // Update is called once per frame
@@ -22,10 +23,12 @@ public class BaseScript : MonoBehaviour
            on =! on;
         }
 
-        if(on == true)
+        //if statement controlling behaviour when power is on
+        if (on == true)
         {
             Debug.Log("ON");
         }
+        //when the power has been turned off
         else
         {
             Debug.Log("OFF");
