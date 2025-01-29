@@ -23,7 +23,8 @@ public class PlanetRotation : MonoBehaviour
         //if statement determining when the power has been turned on
         if (Input.GetKeyDown(KeyCode.Space))
         {
-           on =! on;
+            //reverse boolean state
+            on = ! on;
         }
 
         //if statement controlling behaviour when power is on

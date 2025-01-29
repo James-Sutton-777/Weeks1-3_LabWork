@@ -22,7 +22,8 @@ public class OffScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       on = false;
+        //power is off at the start
+        on = false;
     }
 
     // Update is called once per frame
@@ -31,7 +32,8 @@ public class OffScreen : MonoBehaviour
         //if statement determining when the power has been turned on
         if (Input.GetKeyDown(KeyCode.Space))
         {
-           on =! on;
+            //reverse boolean state
+            on = ! on;
         }
 
         //if statement causing alpha to decrease when power is on
